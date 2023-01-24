@@ -86,6 +86,25 @@ const RightAbouts = [
     }
 ]
 
+const HeroTable = [
+    {
+        text: 'Waiting on Feature Request',
+        count: 4238,
+    },
+    {
+        text: 'Awaiting Customer Response',
+        count: 1005,
+    },
+    {
+        text: 'Awaiting Developer Fix',
+        count: 914,
+    },
+    {
+        text: 'Pending',
+        count: 281,
+    }
+]
+
 
 const Hero = () => {
     return (
@@ -132,36 +151,66 @@ const HeroTop = () => {
 }
 
 
+
 const HeroBody = () => {
     return (
-        <div className='right-body'>
-            <div className='right-left'>
-                <h3 className='left-title'>Today's trends</h3>
-                <div className='left-text'>
-                    <p className='left-data'>as of 25 May 2019, 09:41 PM</p>
-                    <ul className='left-status'>
-                        <li className='status-item'>Today</li>
-                        <li className='status-item'>Yesterday</li>
-                    </ul>
+        <>
+            <div className='right-body'>
+                <div className='right-left'>
+                    <h3 className='left-title'>Today's trends</h3>
+                    <div className='left-text'>
+                        <p className='left-data'>as of 25 May 2019, 09:41 PM</p>
+                        <ul className='left-status'>
+                            <li className='status-item'>Today</li>
+                            <li className='status-item'>Yesterday</li>
+                        </ul>
+                    </div>
+                    <div className='left-graph'>
+                        <img className='graph-img' src={graph} alt={'Graphic'} />
+                    </div>
                 </div>
-                <div className='left-graph'>
-                    <img className='graph-img' src={graph} alt={'Graphic'}/>
-                </div>
+                <ul className='left-list'>
+                    {
+                        RightAbouts.map(card => (
+                            <li className='left-item'>
+                                <h3 className='item-title'>{card.text}</h3>
+                                <p className='item-number'>{card.number}</p>
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
-            <ul className='left-list'>
-                {
-                    RightAbouts.map(card => (
-                        <li className='left-item'>
-                            <h3 className='item-title'>{card.text}</h3>
-                            <p className='item-number'>{card.number}</p>
-                        </li>
-                    ))
-                }
-            </ul>
-        </div>
+            <HeroBottom />
+        </>
     )
 }
 
+
+const HeroBottom = () => {
+    return (
+        <div className='hero-tables'>
+            <div className='left-table'>
+                <div className='left-table-title'>
+                    <p>Unresolved tickets</p>
+                    <span>View details</span>
+                </div>
+                <p className='table-text'>
+                    Group: <span>Support</span>
+                </p>
+                <ul className='table-list'>
+                    {
+                        HeroTable.map(item => (
+                            <li className='table-item'>
+                                <p>{item.text}</p>
+                                <span>{item.count}</span>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    )
+}
 
 
 
