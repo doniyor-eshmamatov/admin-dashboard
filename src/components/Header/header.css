@@ -4,7 +4,8 @@
 }
 
 .logo {
-    padding: 30px 0;
+    position: fixed;
+    padding: 60px 0 30px;
     max-width: 255px;
     width: 100%;
     display: flex;
@@ -22,6 +23,7 @@
 }
 
 .site-header__right {
+    margin-left: 255px;
     padding-left: 30px;
     display: flex;
     align-items: center;

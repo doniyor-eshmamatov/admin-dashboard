@@ -6,6 +6,8 @@
 
 
 .nav {
+    position: fixed;
+    top: 86px;
     max-width: 255px;
     background-color: #363740;
     min-height: 100%;
@@ -56,6 +58,7 @@
 
 
 .hero-right {
+    margin-left: 255px;
     padding-left: 30px;
     width: 100%;
 }

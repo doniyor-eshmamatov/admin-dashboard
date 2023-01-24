@@ -172,7 +172,7 @@ const HeroBody = () => {
                 <ul className='left-list'>
                     {
                         RightAbouts.map(card => (
-                            <li className='left-item'>
+                            <li className='left-item' key={card.text}>
                                 <h3 className='item-title'>{card.text}</h3>
                                 <p className='item-number'>{card.number}</p>
                             </li>
@@ -200,7 +200,7 @@ const HeroBottom = () => {
                 <ul className='table-list'>
                     {
                         HeroTable.map(item => (
-                            <li className='table-item'>
+                            <li className='table-item' key={item.count}>
                                 <p>{item.text}</p>
                                 <span>{item.count}</span>
                             </li>
