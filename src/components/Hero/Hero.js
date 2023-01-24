@@ -117,7 +117,7 @@ const Hero = () => {
                                 navArr.map(item => (
                                     <li className='nav-item' key={item.text}>
                                         <img className='nav-icon' alt={'nav icon'} src={item.img} />
-                                        <a className='nav-link' href={'./index.html'}>{item.text}</a>
+                                        <a className='nav-link' href={'#'}>{item.text}</a>
                                     </li>
                                 ))
                             }
