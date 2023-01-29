@@ -1,9 +1,10 @@
 import Header from "./components/Header/Header.js";
 import Hero from "./components/Hero/Hero.js";
 
+
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header/>
       <Hero/>
     </div>

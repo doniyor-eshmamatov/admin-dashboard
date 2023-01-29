@@ -1,0 +1,112 @@
+
+
+.ticket-body {
+    padding: 20px;
+    flex-direction: column;
+}
+
+.ticket-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ticket-title {
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    color: #252733;
+}
+
+.ticket-sort {
+    display: flex;
+    align-items: center;
+}
+
+.ticket-sort p {
+    display: flex;
+    align-items: center;
+    margin-left: 26px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #4B506D;
+}
+
+.ticket-sort p::before {
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background-image: url('./images/sort-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    content: '';
+}
+
+.ticket-sort p:last-child:before {
+    background-image: url('./images/filter-icon.svg');
+}
+
+
+.ticket-table-top td{
+    padding-bottom: 12px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #9FA2B4;
+}
+
+td {
+    padding: 20px 0;
+    border-bottom: 2px solid #DFE0EB;
+}
+
+.ticket-user {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.ticket-ava {
+    border-radius: 50%;
+    margin-right: 24px;
+}
+
+.ticket-user div {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-quest, .user-name, .user-date {
+    margin-bottom: 0 0 6px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #252733;
+}
+
+.post-last, .user-status, .user-time {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: #C5C7CD;
+}
+
+.user-priority {
+    padding: 5px 10px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #F12B2C;
+    border-radius: 100px;
+}

@@ -7,7 +7,9 @@ import agents from '../../assets/Images/agents.svg';
 import articles from '../../assets/Images/articles.svg';
 import settings from '../../assets/Images/settings.svg';
 import subs from '../../assets/Images/sub.svg';
-import graph from '../../assets/Images/hero-right-graph.png'
+import graph from '../../assets/Images/hero-right-graph.png';
+import Tickets from '../../pages/Tickets/Ticket'
+import { Routes, Route, NavLink } from 'react-router-dom';
 
 const navArr = [
     {
@@ -105,6 +107,25 @@ const HeroTable = [
     }
 ]
 
+const HeroRightnner = () => {
+    return (
+        <>
+            <Routes>
+                <Route path='/' element={<HeroRight />} />
+                <Route path='/tickets' element={<Tickets/>} />
+            </Routes>
+        </>
+    )
+}
+
+const HeroRight = () => {
+    return (
+        <>
+            <HeroTop />
+            <HeroBody />
+        </>
+    )
+}
 
 const Hero = () => {
     return (
@@ -113,19 +134,46 @@ const Hero = () => {
                 <div className='hero__inner'>
                     <nav className='nav'>
                         <ul className='nav-list'>
-                            {
-                                navArr.map(item => (
-                                    <li className='nav-item' key={item.text}>
-                                        <img className='nav-icon' alt={'nav icon'} src={item.img} />
-                                        <a className='nav-link' href={'#'}>{item.text}</a>
-                                    </li>
-                                ))
-                            }
+                            <li>
+                                <NavLink className='nav-item' to={'/'} style={{ display: 'flex', textDecoration: 'none' }}>
+                                    <img className='nav-icon' alt={'nav icon'} src={navArr[0].img} />
+                                    <p className='nav-link'>{navArr[0].text}</p>
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className='nav-item' to={'/tickets'} style={{ display: 'flex', textDecoration: 'none' }}>
+                                    <img className='nav-icon' alt={'nav icon'} src={navArr[1].img} />
+                                    <p className='nav-link'>{navArr[1].text}</p>
+                                </NavLink>
+                            </li>
+                            <li className='nav-item'>
+                                <img className='nav-icon' alt={'nav icon'} src={navArr[2].img} />
+                                <p className='nav-link'>{navArr[2].text}</p>
+                            </li>
+                            <li className='nav-item'>
+                                <img className='nav-icon' alt={'nav icon'} src={navArr[3].img} />
+                                <p className='nav-link'>{navArr[3].text}</p>
+                            </li>
+                            <li className='nav-item'>
+                                <img className='nav-icon' alt={'nav icon'} src={navArr[4].img} />
+                                <p className='nav-link'>{navArr[4].text}</p>
+                            </li>
+                            <li className='nav-item'>
+                                <img className='nav-icon' alt={'nav icon'} src={navArr[5].img} />
+                                <p className='nav-link'>{navArr[5].text}</p>
+                            </li>
+                            <li className='nav-item'>
+                                <img className='nav-icon' alt={'nav icon'} src={navArr[6].img} />
+                                <p className='nav-link'>{navArr[6].text}</p>
+                            </li>
+                            <li className='nav-item'>
+                                <img className='nav-icon' alt={'nav icon'} src={navArr[7].img} />
+                                <p className='nav-link'>{navArr[7].text}</p>
+                            </li>
                         </ul>
                     </nav>
                     <div className='hero-right'>
-                        <HeroTop />
-                        <HeroBody />
+                        <HeroRightnner />
                     </div>
                 </div>
             </div>
